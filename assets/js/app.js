@@ -15,6 +15,7 @@ xhr.onload = function (){
     let dataT = JSON.parse(this.response).filter((item) => item.cc == 'USD');
 
     data.push(dataT[0]);
+    if (data.length == 31){dataManipulation()};
 }
 
 xhr.send();
@@ -46,4 +47,5 @@ let dataManipulation = function () {
 }
     
 
-let timer_id = setTimeout(dataManipulation, 1000);
+//let timer_id = setTimeout(dataManipulation, 0);
+
