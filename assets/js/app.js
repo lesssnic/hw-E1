@@ -30,11 +30,6 @@ xhr.send();
 
 requestPromise.then((dataF) => dataManipulation(dataF));
 
-
-
-
-
-
 function dataManipulation(dataF) { 
 
     dataF.sort((obj1,obj2) => +obj1.exchangedate.split(".").reverse().join("") - +obj2.exchangedate.split(".").reverse().join(""));
@@ -59,6 +54,7 @@ function dataManipulation(dataF) {
     console.log(dataF);
 }
     
+
 
 //let timer_id = setTimeout(dataManipulation, 0);
 
